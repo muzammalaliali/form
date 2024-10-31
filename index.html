@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Software Company Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Crypto Software Company - User Registration Form</h2>
+
+<form action="thank_you.html" method="post" onsubmit="return showMessage()">
+    <!-- Text Input Fields -->
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="John"><br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+
+    <!-- Dropdown Menu -->
+    <label for="cryptos">Choose your preferred cryptocurrency:</label>
+    <select id="cryptos" name="cryptos">
+        <option value="bitcoin">Bitcoin</option>
+        <option value="ethereum">Ethereum</option>
+        <option value="dogecoin">Dogecoin</option>
+        <option value="litecoin">Litecoin</option>
+    </select><br>
+
+    <!-- Multi-Select Dropdown -->
+    <label for="interests">Select your interests:</label>
+    <select id="interests" name="interests" size="4" multiple>
+        <option value="trading">Trading</option>
+        <option value="mining">Mining</option>
+        <option value="blockchain">Blockchain</option>
+        <option value="investment">Investment</option>
+    </select><br>
+
+    <!-- Text Area -->
+    <label for="message">Additional Information:</label>
+    <textarea id="message" name="message" rows="5" cols="30" placeholder="Tell us more about your crypto interests..."></textarea><br>
+
+    <!-- Checkboxes -->
+    <fieldset>
+        <legend>Preferred Services:</legend>
+        <label><input type="checkbox" name="services" value="wallet"> Crypto Wallet</label><br>
+        <label><input type="checkbox" name="services" value="exchange"> Exchange Platform</label><br>
+        <label><input type="checkbox" name="services" value="consulting"> Consulting Services</label><br>
+    </fieldset>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+</form>
+<div id="success-message" style="display: none; color: green; font-weight: bold;">
+    Thank you! Your form has been submitted successfully.
+</div>
+<!-- <script>
+    function showMessage() {
+        alert("Thank you! Your form has been submitted successfully.");
+        return false; // Prevents form from actually submitting for demonstration
+    }
+    </script> -->
+    <script>
+        function showMessage() {
+            document.getElementById("success-message").style.display = "block";
+            return false; // Prevents form from actually submitting for demonstration
+        }
+        </script>
+
+</body>
+</html>
